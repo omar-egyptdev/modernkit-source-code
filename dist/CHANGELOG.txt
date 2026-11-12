@@ -1,0 +1,21 @@
+# ModernKit v1.5.6 — The Mace Enchantments
+
+The four modern Mace enchantments are finally here — fully functional, not just names.
+
+## ⚔️ New Enchantments
+
+- **Density (I–V)** — Every block you fall adds extra smash damage: +0.5 per block per level. Found at the enchanting table. Exclusive with Sharpness, Smite and Bane of Arthropods.
+- **Breach (I–IV)** — Your mace hits make the target's armor 15% less effective per level — including natural mob armor, but never Protection enchants or the Resistance effect. Found at the enchanting table.
+- **Wind Burst (I–III)** — A successful smash launches you back into the air (about 8 blocks per level) so you can chain smash after smash. The burst also knocks back nearby mobs and presses buttons, levers, wooden doors, trapdoors and fence gates, rings bells and breaks chorus flowers — like a real Wind Charge. Even mobs like pouncing foxes holding a Wind Burst mace can activate it. Blast Protection reduces the launch. A loot-only treasure enchantment: find it in Bastion Treasure and End City chests.
+- **Swift Sneak (I–III)** — Sneak at 30% + 15% of your walking speed per level (75% at level III). A loot-only treasure enchantment: find it in Stronghold Library and Simple Dungeon chests.
+
+## 🔧 Also in this version
+
+- Wind Burst and Swift Sneak books now generate as enchanted-book chest loot.
+- Wind Charges and the Wind Burst explosion share one consistent burst behavior.
+
+## 📦 Compatibility
+
+- **Minecraft:** 1.16.5 (Fabric)
+- **Requires:** Fabric API
+- **Works with:** Sodium and Iris
