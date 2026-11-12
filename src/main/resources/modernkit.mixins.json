@@ -10,7 +10,8 @@
     "EnchantmentMixin",
     "ZombieEntityMixin",
     "PiglinEntityMixin",
-    "MobEntityMixin"
+    "MobEntityMixin",
+    "EnchantmentHelperMixin"
   ],
   "injectors": {
     "defaultRequire": 1

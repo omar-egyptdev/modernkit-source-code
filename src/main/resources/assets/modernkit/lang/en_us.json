@@ -29,5 +29,9 @@
   "item.minecraft.emerald_leggings": "Emerald Leggings",
   "item.minecraft.emerald_boots": "Emerald Boots",
   "item.minecraft.rainbow_axe": "Rainbow Axe",
-  "item.minecraft.rainbow_shovel": "Rainbow Shovel"
+  "item.minecraft.rainbow_shovel": "Rainbow Shovel",
+  "enchantment.minecraft.density": "Density",
+  "enchantment.minecraft.breach": "Breach",
+  "enchantment.minecraft.wind_burst": "Wind Burst",
+  "enchantment.minecraft.swift_sneak": "Swift Sneak"
 }
