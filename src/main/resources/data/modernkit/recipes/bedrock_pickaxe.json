@@ -10,7 +10,7 @@
     "S": { "item": "minecraft:stick" }
   },
   "result": {
-    "item": "modernkit:bedrock_pickaxe",
+    "item": "minecraft:bedrock_pickaxe",
     "count": 1
   }
 }

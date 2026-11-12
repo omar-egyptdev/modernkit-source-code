@@ -120,7 +120,7 @@ public final class SpearWorldLoot {
 
         enchantment.putString(
                 "id",
-                ModernKitMod.MOD_ID + ":lunge"
+                "minecraft:lunge"
         );
 
         enchantment.putShort(

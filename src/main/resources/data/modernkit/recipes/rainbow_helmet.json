@@ -6,11 +6,11 @@
   ],
   "key": {
     "I": {
-      "item": "modernkit:rainbow_ingot"
+      "item": "minecraft:rainbow_ingot"
     }
   },
   "result": {
-    "item": "modernkit:rainbow_helmet",
+    "item": "minecraft:rainbow_helmet",
     "count": 1
   }
 }

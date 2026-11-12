@@ -4,5 +4,5 @@
     { "item": "minecraft:blaze_rod" },
     { "item": "minecraft:phantom_membrane" }
   ],
-  "result": { "item": "modernkit:breeze_rod", "count": 1 }
+  "result": { "item": "minecraft:breeze_rod", "count": 1 }
 }

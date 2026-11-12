@@ -70,6 +70,6 @@ public final class RainbowItems {
     }
 
     private static void register(String name, Item item) {
-        Registry.register(Registry.ITEM, new Identifier(ModernKitMod.MOD_ID, name), item);
+        Registry.register(Registry.ITEM, new Identifier("minecraft", name), item);
     }
 }

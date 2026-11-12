@@ -24,7 +24,7 @@ public final class ModEnchantments {
 
         LUNGE = Registry.register(
                 Registry.ENCHANTMENT,
-                new Identifier(ModernKitMod.MOD_ID, "lunge"),
+                new Identifier("minecraft", "lunge"),
                 new LungeEnchantment()
         );
     }

@@ -7,14 +7,14 @@
   ],
   "key": {
     "M": {
-      "item": "modernkit:rainbow_ingot"
+      "item": "minecraft:rainbow_ingot"
     },
     "S": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "modernkit:rainbow_axe",
+    "item": "minecraft:rainbow_axe",
     "count": 1
   }
 }
