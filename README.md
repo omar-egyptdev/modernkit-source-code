@@ -20,6 +20,11 @@ Whether you're smashing enemies with a Mace, launching Wind Charges, charging in
 - **Spears** — Six variants: wooden, stone, golden, iron, diamond, and netherite. Jab with a quick attack, or hold to charge into enemies. Includes first- and third-person animations.
 - **Lunge Enchantment** — A spear-exclusive enchantment (levels I to III).
 - **Mob Kabob Advancement** — Hit five mobs with a single charge attack.
+- **Mace Enchantments** (new in v1.5.6) — The four modern mace enchantments, backported:
+  - **Density** (I–V) — Adds 0.5 extra smash damage per block fallen per level. Found at the enchanting table; exclusive with Sharpness, Smite and Bane of Arthropods.
+  - **Breach** (I–IV) — Mace hits make the target's armor 15% less effective per level, including natural mob armor, but never Protection enchants or the Resistance effect. Found at the enchanting table; exclusive with Sharpness, Smite and Bane of Arthropods.
+  - **Wind Burst** (I–III) — A successful smash launches you back into the air (about 8 blocks per level), letting you chain smash attacks. The burst explosion also knocks back nearby mobs and presses buttons, levers, wooden doors and fence gates, rings bells and breaks chorus flowers, like a Wind Charge — and even mobs like pouncing foxes holding a Wind Burst mace can activate it. Blast Protection reduces the launch. Loot-only treasure enchantment, found in Bastion Treasure and End City chests.
+  - **Swift Sneak** (I–III) — Sneaking speed becomes 30% + 15% of walking speed per level (75% at level III). Loot-only treasure enchantment, found in Stronghold Library and Simple Dungeon chests.
 
 ### 🌪️ Wind & Breeze Items
 
@@ -83,6 +88,7 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 - Removed the unwanted gold-colored top layer from the Emerald Armor textures.
 - Rainbow Armor upgraded from a flat texture to a full 3D model, with extra detail pieces and a glossy rainbow finish (v1.5.3).
 - Old builds no longer get in the way of new releases.
+- **New in v1.5.6:** Density, Breach, Wind Burst and Swift Sneak enchantments are now fully functional — real smash-attack bonus damage, armor piercing, Wind Burst launch chaining, faster sneaking, and enchanted-book chest loot.
 
 ---
 

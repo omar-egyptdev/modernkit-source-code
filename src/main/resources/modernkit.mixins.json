@@ -11,7 +11,8 @@
     "ZombieEntityMixin",
     "PiglinEntityMixin",
     "MobEntityMixin",
-    "EnchantmentHelperMixin"
+    "EnchantmentHelperMixin",
+    "BreachArmorMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -19,6 +20,7 @@
   "client": [
     "MinecraftClientMixin",
     "HeldItemRendererMixin",
-    "PlayerEntityModelMixin"
+    "PlayerEntityModelMixin",
+    "SwiftSneakMixin"
   ]
 }

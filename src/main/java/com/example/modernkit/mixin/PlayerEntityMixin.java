@@ -28,17 +28,29 @@ public abstract class PlayerEntityMixin {
         }
 
         float fall = self.fallDistance;
-        boolean hit = target.damage(source, amount + SmashAttack.bonusDamage(fall));
+        float bonus = SmashAttack.bonusDamage(fall) + SmashAttack.densityBonus(self, fall);
+        boolean hit = target.damage(source, amount + bonus);
 
         if (hit && !self.world.isClient) {
             // Phase 3: effects
             SmashAttack.doEffects(self, target, fall);
-            SmashAttack.knockbackNearby(self, target, fall);
             self.fallDistance = 0.0F;
             this.modernkit$smashNoFall = true;
-            if (self instanceof ServerPlayerEntity) {
-                self.setVelocity(self.getVelocity().x, 0.01D, self.getVelocity().z);
-                ((ServerPlayerEntity) self).networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(self));
+
+            int windBurst = SmashAttack.windBurstLevel(self);
+            if (windBurst > 0) {
+                // Vanilla: Wind Burst's own launch does NOT negate the fall
+                // damage of the following landing, so drop the no-fall flag.
+                // The Wind Burst explosion supplies the area knockback here,
+                // so the plain smash knockback is skipped to avoid a double push.
+                this.modernkit$smashNoFall = false;
+                SmashAttack.windBurstLaunch(self, target, windBurst);
+            } else {
+                SmashAttack.knockbackNearby(self, target, fall);
+                if (self instanceof ServerPlayerEntity) {
+                    self.setVelocity(self.getVelocity().x, 0.01D, self.getVelocity().z);
+                    ((ServerPlayerEntity) self).networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(self));
+                }
             }
         }
         return hit;
