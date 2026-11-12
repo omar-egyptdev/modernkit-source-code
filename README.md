@@ -95,7 +95,7 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 ## 📦 Compatibility
 
 - **Minecraft:** 1.16.5 (Fabric)
-- **Requires:** Fabric API
+- **Requires:** Fabric API and Fabric Loader 0.14.21 (or newer)
 - **Works with:** Sodium and Iris
 
 ---
