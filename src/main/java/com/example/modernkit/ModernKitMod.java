@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.example.modernkit.item.ModItems;
+import com.example.modernkit.block.ModBlocks;
 import com.example.modernkit.item.RainbowItems;
 import com.example.modernkit.item.EmeraldItems;
 import com.example.modernkit.entity.ModEntities;
@@ -23,6 +24,7 @@ public class ModernKitMod implements ModInitializer {
         ModEntities.register();
         ModSounds.register();
         ModItems.register();
+        ModBlocks.register();
         RainbowItems.register();
         EmeraldItems.register();
         ModEnchantments.register();

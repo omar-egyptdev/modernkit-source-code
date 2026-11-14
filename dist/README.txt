@@ -30,7 +30,7 @@ Whether you're smashing enemies with a Mace, launching Wind Charges, charging in
 
 - **Wind Charge** — A throwable projectile with its own sounds.
 - **Breeze Rod** — Used to craft Wind Charges and the Mace, and to repair the Mace.
-- **Heavy Core** — The crafting component at the heart of the Mace.
+- **Heavy Core** — The crafting component at the heart of the Mace. A real placeable block, with the Heavy Core texture on all six faces (new in v1.5.8).
 
 ### ⛏️ Tools
 
@@ -94,6 +94,7 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 - **New in v1.5.704:** Vanilla-style crisp texture edges on Emerald gear, Rainbow gear, the Wind Charge and the Bedrock Pickaxe, giving their held 3D models clean solid sides.
 - **New in v1.5.704:** The Emerald Pickaxe now matches the Emerald Axe and Shovel colors.
 - **New in v1.5.704:** Authentic Breeze Rod and Heavy Core textures — both items now use the real Minecraft textures.
+- **New in v1.5.8:** Heavy Core is now a placeable block with the Heavy Core texture on all six faces, and it still works in crafting exactly as before.
 
 ---
 

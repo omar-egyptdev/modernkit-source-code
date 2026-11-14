@@ -1,18 +1,17 @@
-# ModernKit v1.5.704 — True 3D Held Items
+# ModernKit v1.5.8 — Heavy Core Is Now a Real Block
 
-Held items finally look the way they should — full 3D for everyone, Sodium included.
+The Heavy Core is no longer just an item — it is now a true placeable block, just like in the modern versions.
 
-## 🎨 Rendering Fixes
+## 🧱 The Heavy Core Block
 
-- **Flat held items fixed with Sodium** — Several items (Breeze Rod, Heavy Core and more) rendered as paper-thin sprites when held while Sodium was installed. ModernKit now ships a small built-in Sodium compatibility override that restores the vanilla item rendering path automatically. No config editing, nothing to install — it just works.
-- **Clean 3D side walls on all gear** — Textures with soft, anti-aliased edges built their 3D held models around nearly invisible edge pixels, which made the sides of held items look broken or incomplete. All Emerald gear, all Rainbow gear, the Wind Charge and the Bedrock Pickaxe now use vanilla-style crisp alpha, so every held item has solid, clean sides — exactly like vanilla items.
-- **Consistent emerald colors** — The Emerald Pickaxe's head was drawn in a teal-leaning green family, noticeably different from the Emerald Axe and Shovel. It now uses the same pure emerald green palette as the rest of the set.
-- **Authentic item textures** — The Breeze Rod and Heavy Core now use the real Minecraft textures. The Heavy Core was also cleaned to vanilla-style crisp alpha so its 3D model renders with solid sides.
-
+- **Placeable** — Craft a Heavy Core with Netherite Ingot surrounded by 4 Obsidian, then place it in the world. It breaks and drops itself like a normal block, with metallic block sounds.
+- **The Heavy Core texture on all six faces** — every side of the placed block (four sides, top and bottom) shows the Heavy Core face texture.
+- **Crafting unchanged** — the Heavy Core still works exactly as before in the Mace recipe: Heavy Core above a Breeze Rod.
+- **Same look in your inventory** — the Heavy Core item keeps its familiar icon in the hotbar and when held.
 
 ## 📦 Compatibility
 
 - **Minecraft:** 1.16.5 (Fabric)
 - **Requires:** Fabric API and Fabric Loader 0.14.21 (or newer)
-- **Works with:** Sodium and Iris — Sodium held-item compatibility is now built into the mod
+- **Works with:** Sodium and Iris — Sodium held-item compatibility is built into the mod
 - **Both sides:** install on the client and the server
