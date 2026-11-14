@@ -1,4 +1,4 @@
-# ModernKit v1.5.7 — True 3D Held Items
+# ModernKit v1.5.704 — True 3D Held Items
 
 Held items finally look the way they should — full 3D for everyone, Sodium included.
 
@@ -7,6 +7,7 @@ Held items finally look the way they should — full 3D for everyone, Sodium inc
 - **Flat held items fixed with Sodium** — Several items (Breeze Rod, Heavy Core and more) rendered as paper-thin sprites when held while Sodium was installed. ModernKit now ships a small built-in Sodium compatibility override that restores the vanilla item rendering path automatically. No config editing, nothing to install — it just works.
 - **Clean 3D side walls on all gear** — Textures with soft, anti-aliased edges built their 3D held models around nearly invisible edge pixels, which made the sides of held items look broken or incomplete. All Emerald gear, all Rainbow gear, the Wind Charge and the Bedrock Pickaxe now use vanilla-style crisp alpha, so every held item has solid, clean sides — exactly like vanilla items.
 - **Consistent emerald colors** — The Emerald Pickaxe's head was drawn in a teal-leaning green family, noticeably different from the Emerald Axe and Shovel. It now uses the same pure emerald green palette as the rest of the set.
+- **Authentic item textures** — The Breeze Rod and Heavy Core now use the real Minecraft textures. The Heavy Core was also cleaned to vanilla-style crisp alpha so its 3D model renders with solid sides.
 
 ## 🔧 Who needs this update?
 
