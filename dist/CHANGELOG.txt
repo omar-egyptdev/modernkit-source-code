@@ -9,10 +9,6 @@ Held items finally look the way they should — full 3D for everyone, Sodium inc
 - **Consistent emerald colors** — The Emerald Pickaxe's head was drawn in a teal-leaning green family, noticeably different from the Emerald Axe and Shovel. It now uses the same pure emerald green palette as the rest of the set.
 - **Authentic item textures** — The Breeze Rod and Heavy Core now use the real Minecraft textures. The Heavy Core was also cleaned to vanilla-style crisp alpha so its 3D model renders with solid sides.
 
-## 🔧 Who needs this update?
-
-- If you play with Sodium: previously flat or imperfect held items (Emerald gear, Rainbow gear, Wind Charge, Bedrock Pickaxe, Breeze Rod, Heavy Core) now render in full 3D.
-- If you play without Sodium: nothing changes for flat rendering, but gear held in hand now has clean, solid side walls and matching emerald colors.
 
 ## 📦 Compatibility
 
