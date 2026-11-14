@@ -1,4 +1,4 @@
-# ModernKit v1.5.8 — Heavy Core Is Now a Real Block
+# ModernKit v1.5.82 — Heavy Core Is Now a Real Block
 
 The Heavy Core is no longer just an item — it is now a true placeable block, just like in the modern versions.
 
@@ -7,7 +7,7 @@ The Heavy Core is no longer just an item — it is now a true placeable block, j
 - **Placeable** — Craft a Heavy Core with Netherite Ingot surrounded by 4 Obsidian, then place it in the world. It breaks and drops itself like a normal block, with metallic block sounds.
 - **The Heavy Core texture on all six faces** — every side of the placed block (four sides, top and bottom) shows the Heavy Core face texture.
 - **Crafting unchanged** — the Heavy Core still works exactly as before in the Mace recipe: Heavy Core above a Breeze Rod.
-- **Same look in your inventory** — the Heavy Core item keeps its familiar icon in the hotbar and when held.
+- **Same look in your inventory** — the Heavy Core now renders as a real 3D block in the hotbar and in hand, exactly like vanilla blocks such as stone or dirt.
 
 ## 📦 Compatibility
 
