@@ -46,6 +46,7 @@ A complete equipment collection crafted using Emeralds.
 - **Emerald Shovel** — An emerald-themed digging tool.
 - **Emerald Armor** — A complete armor set consisting of a Helmet, Chestplate, Leggings, and Boots, with real 3D shaped pieces such as a helmet crest, cheek guards, shoulder pauldrons, knee plates, and boot cuffs.
 - **Refined Armor Textures** — Updated in v1.5.2 with a cleaner, more polished appearance. The unwanted gold-colored top layer has been removed from the Emerald Armor textures.
+- **Unified Colors** — Updated in v1.5.7: the Emerald Pickaxe now uses the same pure emerald green palette as the Emerald Axe and Shovel.
 - Emerald equipment uses the same standard crafting shapes as Rainbow equipment, with Emeralds replacing Rainbow Ingots.
 
 ### 🌈 Rainbow Set
@@ -89,6 +90,9 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 - Rainbow Armor upgraded from a flat texture to a full 3D model, with extra detail pieces and a glossy rainbow finish (v1.5.3).
 - Old builds no longer get in the way of new releases.
 - **New in v1.5.6:** Density, Breach, Wind Burst and Swift Sneak enchantments are now fully functional — real smash-attack bonus damage, armor piercing, Wind Burst launch chaining, faster sneaking, and enchanted-book chest loot.
+- **New in v1.5.7:** True 3D held items with Sodium — items no longer render as flat sprites in hand when Sodium is installed. The fix is built into the mod, so it works automatically with no config changes.
+- **New in v1.5.7:** Vanilla-style crisp texture edges on Emerald gear, Rainbow gear, the Wind Charge and the Bedrock Pickaxe, giving their held 3D models clean solid sides.
+- **New in v1.5.7:** The Emerald Pickaxe now matches the Emerald Axe and Shovel colors.
 
 ---
 
@@ -96,7 +100,7 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 
 - **Minecraft:** 1.16.5 (Fabric)
 - **Requires:** Fabric API and Fabric Loader 0.14.21 (or newer)
-- **Works with:** Sodium and Iris
+- **Works with:** Sodium and Iris (Sodium compatibility for held item rendering is built in since v1.5.7)
 
 ---
 

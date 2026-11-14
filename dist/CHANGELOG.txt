@@ -1,21 +1,21 @@
-# ModernKit v1.5.6 — The Mace Enchantments
+# ModernKit v1.5.7 — True 3D Held Items
 
-The four modern Mace enchantments are finally here — fully functional, not just names.
+Held items finally look the way they should — full 3D for everyone, Sodium included.
 
-## ⚔️ New Enchantments
+## 🎨 Rendering Fixes
 
-- **Density (I–V)** — Every block you fall adds extra smash damage: +0.5 per block per level. Found at the enchanting table. Exclusive with Sharpness, Smite and Bane of Arthropods.
-- **Breach (I–IV)** — Your mace hits make the target's armor 15% less effective per level — including natural mob armor, but never Protection enchants or the Resistance effect. Found at the enchanting table.
-- **Wind Burst (I–III)** — A successful smash launches you back into the air (about 8 blocks per level) so you can chain smash after smash. The burst also knocks back nearby mobs and presses buttons, levers, wooden doors, trapdoors and fence gates, rings bells and breaks chorus flowers — like a real Wind Charge. Even mobs like pouncing foxes holding a Wind Burst mace can activate it. Blast Protection reduces the launch. A loot-only treasure enchantment: find it in Bastion Treasure and End City chests.
-- **Swift Sneak (I–III)** — Sneak at 30% + 15% of your walking speed per level (75% at level III). A loot-only treasure enchantment: find it in Stronghold Library and Simple Dungeon chests.
+- **Flat held items fixed with Sodium** — Several items (Breeze Rod, Heavy Core and more) rendered as paper-thin sprites when held while Sodium was installed. ModernKit now ships a small built-in Sodium compatibility override that restores the vanilla item rendering path automatically. No config editing, nothing to install — it just works.
+- **Clean 3D side walls on all gear** — Textures with soft, anti-aliased edges built their 3D held models around nearly invisible edge pixels, which made the sides of held items look broken or incomplete. All Emerald gear, all Rainbow gear, the Wind Charge and the Bedrock Pickaxe now use vanilla-style crisp alpha, so every held item has solid, clean sides — exactly like vanilla items.
+- **Consistent emerald colors** — The Emerald Pickaxe's head was drawn in a teal-leaning green family, noticeably different from the Emerald Axe and Shovel. It now uses the same pure emerald green palette as the rest of the set.
 
-## 🔧 Also in this version
+## 🔧 Who needs this update?
 
-- Wind Burst and Swift Sneak books now generate as enchanted-book chest loot.
-- Wind Charges and the Wind Burst explosion share one consistent burst behavior.
+- If you play with Sodium: previously flat or imperfect held items (Emerald gear, Rainbow gear, Wind Charge, Bedrock Pickaxe, Breeze Rod, Heavy Core) now render in full 3D.
+- If you play without Sodium: nothing changes for flat rendering, but gear held in hand now has clean, solid side walls and matching emerald colors.
 
 ## 📦 Compatibility
 
 - **Minecraft:** 1.16.5 (Fabric)
 - **Requires:** Fabric API and Fabric Loader 0.14.21 (or newer)
-- **Works with:** Sodium and Iris
+- **Works with:** Sodium and Iris — Sodium held-item compatibility is now built into the mod
+- **Both sides:** install on the client and the server
