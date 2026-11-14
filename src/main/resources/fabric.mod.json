@@ -25,5 +25,13 @@
     "fabricloader": ">=0.14.0",
     "fabric": "*",
     "minecraft": "1.16.x"
+  },
+  "custom": {
+    "sodium:options": {
+      "mixin.features.item": false,
+      "mixin.features.matrix_stack": false,
+      "mixin.features.buffer_builder.intrinsics": false,
+      "mixin.features.texture_tracking": false
+    }
   }
 }
