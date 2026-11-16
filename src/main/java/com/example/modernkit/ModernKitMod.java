@@ -7,6 +7,7 @@ import com.example.modernkit.item.ModItems;
 import com.example.modernkit.block.ModBlocks;
 import com.example.modernkit.item.RainbowItems;
 import com.example.modernkit.item.EmeraldItems;
+import com.example.modernkit.item.ObsidianItems;
 import com.example.modernkit.entity.ModEntities;
 import com.example.modernkit.loot.EnchantmentLoot;
 import com.example.modernkit.loot.SpearWorldLoot;
@@ -27,6 +28,7 @@ public class ModernKitMod implements ModInitializer {
         ModBlocks.register();
         RainbowItems.register();
         EmeraldItems.register();
+        ObsidianItems.register();
         ModEnchantments.register();
         SpearWorldLoot.register();
         EnchantmentLoot.register();

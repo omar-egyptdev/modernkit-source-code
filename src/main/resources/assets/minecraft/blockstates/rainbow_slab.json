@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "minecraft:block/rainbow_slab"
+    },
+    "type=top": {
+      "model": "minecraft:block/rainbow_slab_top"
+    },
+    "type=double": {
+      "model": "minecraft:block/rainbow_block"
+    }
+  }
+}

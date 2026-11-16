@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RR",
+    "RR",
+    "RR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:rainbow_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:rainbow_door",
+    "count": 3
+  }
+}

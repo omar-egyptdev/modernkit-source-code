@@ -15,7 +15,8 @@
     ],
     "client": [
       "com.example.modernkit.client.WindChargeClient",
-      "com.example.modernkit.client.ArmorClient"
+      "com.example.modernkit.client.ArmorClient",
+      "com.example.modernkit.client.BlockClient"
     ]
   },
   "mixins": [

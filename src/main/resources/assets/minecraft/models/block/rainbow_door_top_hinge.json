@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "minecraft:block/rainbow_door_bottom",
+    "top": "minecraft:block/rainbow_door_top"
+  }
+}

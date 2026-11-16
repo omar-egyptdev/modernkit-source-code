@@ -8,7 +8,7 @@ Ever wanted to experience some of Minecraft's newer items without leaving your f
 
 **ModernKit** aims to bridge that gap by introducing items and equipment inspired by newer Minecraft updates into older versions, bringing new possibilities to your gameplay.
 
-Whether you're smashing enemies with a Mace, launching Wind Charges, charging into battle with a Spear, mining bedrock in survival, or equipping yourself with Emerald and Rainbow gear, ModernKit brings more tools and equipment to your Minecraft world.
+Whether you're smashing enemies with a Mace, launching Wind Charges, charging into battle with a Spear, mining bedrock in survival, or equipping yourself with Emerald, Rainbow and Obsidian gear, ModernKit brings more tools and equipment to your Minecraft world.
 
 ---
 
@@ -61,6 +61,20 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 - **Rainbow Ingot** — The crafting and repair material for the set.
 - Every Rainbow item is fireproof, enchantable, and has enormous durability.
 
+### 🪨 Obsidian Set (new in v1.5.9)
+
+Dark purple equipment and building blocks crafted from Obsidian.
+
+- **Obsidian Sword** — Hits for 13 damage.
+- **Obsidian Pickaxe / Axe / Shovel** — 2048-durability tools, one step above Diamond.
+- **Obsidian Armor** (Helmet, Chestplate, Leggings, Boots) — Diamond-level protection with Netherite-level toughness, repairable with Obsidian. Has its own custom 3D model: a jagged helmet crest, swept-back horn spikes, cheek guards, layered chest plating with a chest gem shard, heavy pauldrons, a plated belt, and boot cuffs.
+- **Obsidian Stairs / Slab / Door** — Obsidian building blocks. The door has window panes, opens by hand, and zombies can't break it down.
+
+### 🧱 Building Blocks (new in v1.5.9)
+
+- **Rainbow Block / Slab / Door** — the rainbow gear's animated shimmer as placeable blocks; the rainbow layers animate in your hand, in your inventory and when placed.
+- **Gold / Diamond / Emerald / Coal / Redstone Slab** — half-size versions of the vanilla blocks.
+
 ---
 
 ## 🧰 Crafting Recipes
@@ -77,6 +91,12 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 | Rainbow Armor | Crafted from Rainbow Ingots in the standard armor shapes |
 | Emerald Sword / Pickaxe / Axe / Shovel | Crafted using Emeralds in the standard tool shapes |
 | Emerald Armor | Crafted using Emeralds in the standard armor shapes |
+| Obsidian Sword / Pickaxe / Axe / Shovel | Crafted using Obsidian in the standard tool shapes |
+| Obsidian Armor | Crafted using Obsidian in the standard armor shapes |
+| Obsidian Stairs / Slab / Door | Crafted using Obsidian (stairs 4, slabs 6, doors 3) |
+| Rainbow Block | 9 Rainbow Ingots |
+| Rainbow Slab / Door | Crafted from Rainbow Blocks (slabs 6, doors 3) |
+| Gold / Diamond / Emerald / Coal / Redstone Slab | 3 of each block (makes 6) |
 
 ---
 
@@ -95,6 +115,9 @@ The most powerful gear in ModernKit, with animated rainbow icons.
 - **New in v1.5.704:** The Emerald Pickaxe now matches the Emerald Axe and Shovel colors.
 - **New in v1.5.704:** Authentic Breeze Rod and Heavy Core textures — both items now use the real Minecraft textures.
 - **New in v1.5.82:** Heavy Core is now a placeable block with the Heavy Core texture on all six faces, renders as a real 3D block in hand and inventory like vanilla blocks, and still works in crafting exactly as before.
+- **New in v1.5.9:** The Obsidian Set (tools, armor, stairs, slab and door), animated Rainbow Block / Slab / Door, and Gold, Diamond, Emerald, Coal and Redstone Slabs.
+- **New in v1.5.9:** Obsidian Armor has its own custom 3D model — jagged helmet crest, swept-back horn spikes, cheek guards, layered chest plating with a gem shard, heavy pauldrons, plated belt and boot cuffs — instead of the standard vanilla armor shape.
+- **New in v1.5.9:** Fixed a bug where a placed Heavy Core dropped nothing when broken in survival.
 
 ---
 

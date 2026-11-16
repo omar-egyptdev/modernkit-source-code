@@ -1,13 +1,37 @@
-# ModernKit v1.5.82 — Heavy Core Is Now a Real Block
+# ModernKit v1.5.9 — Obsidian Gear, Rainbow Blocks & Material Slabs
 
-The Heavy Core is no longer just an item — it is now a true placeable block, just like in the modern versions.
+A big content update: a full Obsidian equipment set with its own custom 3D armor model, Obsidian and Rainbow building blocks, slabs for five vanilla materials, and a survival bug fix.
 
-## 🧱 The Heavy Core Block
+## 🪨 Obsidian Equipment
 
-- **Placeable** — Craft a Heavy Core with Netherite Ingot surrounded by 4 Obsidian, then place it in the world. It breaks and drops itself like a normal block, with metallic block sounds.
-- **The Heavy Core texture on all six faces** — every side of the placed block (four sides, top and bottom) shows the Heavy Core face texture.
-- **Crafting unchanged** — the Heavy Core still works exactly as before in the Mace recipe: Heavy Core above a Breeze Rod.
-- **Same look in your inventory** — the Heavy Core now renders as a real 3D block in the hotbar and in hand, exactly like vanilla blocks such as stone or dirt.
+- **Obsidian Sword, Pickaxe, Axe and Shovel** — dark purple obsidian tools, one step above Diamond: 2048 durability, faster mining, and the Sword hits for 13 damage. Crafted from Obsidian in the standard tool shapes.
+- **Obsidian Armor (Helmet, Chestplate, Leggings, Boots)** — Diamond-level protection with Netherite-level toughness, 40 uses per armor point, and repairable with Obsidian. Crafted from Obsidian in the standard armor shapes.
+
+## 🛡️ Custom 3D Obsidian Armor Model
+
+Obsidian Armor does not use the standard vanilla armor shape — it has its own 3D model in the same style as the Emerald and Rainbow armor sets:
+
+- **Helmet** — jagged crest fin down the center, two swept-back horn spikes, and side cheek guards.
+- **Chestplate** — layered chest plate with a protruding gem shard, an abdomen plate, and a full back plate.
+- **Pauldrons** — heavy shoulder caps with side plates and top spikes.
+- **Leggings** — belt buckle, hip side plates, and thigh and knee plates.
+- **Boots** — cuff rings and protruding toe caps.
+
+All pieces use the obsidian purple-black palette to match the gear icons.
+
+## 🧱 Obsidian & Rainbow Blocks
+
+- **Obsidian Stairs, Slab and Door** — build with obsidian at last. The door has window panes, opens by hand, and zombies can't break it down.
+- **Rainbow Block, Slab and Door** — the rainbow gear's animated shimmer, now as placeable blocks. The rainbow layers animate in your hand, in your inventory and when placed.
+- Craft the Rainbow Block from 9 Rainbow Ingots; slabs give 6, doors give 3.
+
+## 🟨 Material Slabs
+
+- **Gold, Diamond, Emerald, Coal and Redstone Slabs** — half-size versions of the vanilla blocks, crafted from 3 of each block (makes 6).
+
+## 🐛 Fixes
+
+- **Heavy Core now drops itself in survival** — placing it worked since v1.5.82, but breaking a placed Heavy Core gave nothing back. Fixed.
 
 ## 📦 Compatibility
 

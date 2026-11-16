@@ -1,6 +1,7 @@
 package com.example.modernkit.client;
 
 import com.example.modernkit.item.EmeraldItems;
+import com.example.modernkit.item.ObsidianItems;
 import com.example.modernkit.item.RainbowItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -17,6 +18,8 @@ public class ArmorClient implements ClientModInitializer {
     private static EmeraldArmorModel emeraldInner;
     private static RainbowArmorModel rainbowOuter;
     private static RainbowArmorModel rainbowInner;
+    private static ObsidianArmorModel obsidianOuter;
+    private static ObsidianArmorModel obsidianInner;
 
     @Override
     public void onInitializeClient() {
@@ -31,6 +34,12 @@ public class ArmorClient implements ClientModInitializer {
                 RainbowItems.RAINBOW_CHESTPLATE,
                 RainbowItems.RAINBOW_LEGGINGS,
                 RainbowItems.RAINBOW_BOOTS);
+
+        ArmorRenderingRegistry.registerModel(ArmorClient::obsidianModel,
+                ObsidianItems.OBSIDIAN_HELMET,
+                ObsidianItems.OBSIDIAN_CHESTPLATE,
+                ObsidianItems.OBSIDIAN_LEGGINGS,
+                ObsidianItems.OBSIDIAN_BOOTS);
     }
 
     private static BipedEntityModel<LivingEntity> emeraldModel(LivingEntity entity, ItemStack stack,
@@ -59,5 +68,19 @@ public class ArmorClient implements ClientModInitializer {
             rainbowOuter = new RainbowArmorModel(1.0F, false);
         }
         return rainbowOuter;
+    }
+
+    private static BipedEntityModel<LivingEntity> obsidianModel(LivingEntity entity, ItemStack stack,
+                                                                EquipmentSlot slot, BipedEntityModel<LivingEntity> defaultModel) {
+        if (slot == EquipmentSlot.LEGS) {
+            if (obsidianInner == null) {
+                obsidianInner = new ObsidianArmorModel(0.5F, true);
+            }
+            return obsidianInner;
+        }
+        if (obsidianOuter == null) {
+            obsidianOuter = new ObsidianArmorModel(1.0F, false);
+        }
+        return obsidianOuter;
     }
 }
