@@ -1,75 +1,8 @@
-# ModernKit v1.5.97 — Wind Charge Rework, All Custom Sounds & Redstone Slab
-
-A sounds-and-fixes update for the v1.5.9 content: the Wind Charge now works like the
-real one from newer versions, every sound is custom (Spear, Mace, Wind Charge, Obsidian
-Door), plus proper door item icons and gameplay fixes.
-
-## 🔊 New Sounds
-
-- **The Spear now has its own sounds** — three attack whooshes, three hit impacts, and
-  three lunge sounds for charging: engaged, tired (low charge) and disengaged. Mobs
-  wielding spears use the same hit sound instead of the old trident sound.
-- **The Mace now has its own sounds** — four ground smash sounds (a heavy variant
-  kicks in on big falls) and three air sounds for the Wind Burst launch shockwave.
-- **The Wind Charge now has its own sounds** — three burst sounds for the explosion
-  and a custom airy throw whoosh (no more vanilla trident sounds).
-
-## 🌪️ Wind Charge Mechanics Rework
-
-The Wind Charge now behaves like the real one from newer versions:
-
-- **Free wind charge jumps** — the vanilla fall rule: when a burst launches you, fall
-  damage only starts building up once you fall back below the height where the burst
-  hit you. Throw one at your feet, ride the gust, land safe. This protection is now
-  reliable: it used to be dropped on the very tick of the burst, because the player
-  was still standing on the ground at that moment.
-- **Proper launch** — the burst now uses the real explosion knockback model taken
-  from the game code: falloff measured from your feet, push direction aimed at your
-  eyes, and line-of-sight exposure. A charge bursting at your feet throws you about
-  7 blocks straight up, and a jump on top of it clears the 8-block "Who Needs
-  Rockets?" height.
-- **Directional push** — a burst shoves entities away from the blast toward their
-  eyes instead of a flat sideways pop with a fixed vertical hop: point-blank bursts
-  launch straight up, off-center bursts throw up and away, and walls in between
-  block the push. Blast Protection and knockback resistance still reduce it.
-- **Gust visuals** — bursts spawn expanding white gust rings with a rising center
-  column and end-rod sparks, instead of a flat smoke puff.
-- **Flight trail** — every thrown wind charge now leaves a swirling cloud wake with
-  occasional end-rod sparks, visible to every player.
-- **Louder burst** — the burst sound now plays at full volume.
-- Already matching vanilla and kept: 2.4-block burst radius, direct hit deals 1
-  damage, straight no-gravity flight, deflectable by melee, presses buttons/levers/
-  doors/trapdoors/fence gates, rings bells, breaks chorus flowers, Blast Protection
-  reduces the knockback, mobs keep normal fall damage.
-
-## 🔴 Redstone Slab
-
-- **The Redstone Slab now works like a full block.** Redstone dust can be placed on it, dust climbs onto it like on a solid block, and power flows through it — so a piston or other component on top of the slab receives power from below.
-- Works in both forms: on a single slab and when two slabs are doubled into a full block.
-
-## 🚪 Door Item Icons
-
-- **Obsidian Door** now has its own door icon drawn in the vanilla door style — the hotbar and held item show the same door shape as the vanilla oak door icon (window panes, hinges, handle and recessed panels), and it takes its colors and obsidian swirls straight from the actual obsidian door texture, so the held icon matches the door you place.
-- **Rainbow Door** got the same door icon treatment, with the animated rainbow shimmer like the rainbow gear.
-
-## 🪨 Obsidian Improvements
-
-- **Fireproof:** every Obsidian item (tools, armor, stairs, slab and door) no longer burns in fire or lava when dropped, like the obsidian block itself.
-- **Durability confirmed:** the tools keep their 2048 durability and the armor keeps 40 uses per armor point (Netherite-level).
+# ModernKit v1.5.973 — Mob Spear Thorns Fix
 
 ## 🐛 Fixes
 
-- **Custom sounds fixed** — the Spear, Mace and Wind Charge sounds were silent because
-  their sound files were registered without the modernkit namespace prefix in the sound
-  definitions; they now play correctly everywhere (attacks, hits, lunges, smashes,
-  bursts, throws — by players and by mobs).
-- **Obsidian Door sound** — the door now opens and closes with the normal vanilla door
-  sound, by hand and by redstone.
-- **Rainbow Block now shows its name** ("Rainbow Block") instead of the raw translation key.
-
-## 📦 Compatibility
-
-- **Minecraft:** 1.16.5 (Fabric)
-- **Requires:** Fabric API and Fabric Loader 0.14.21 (or newer)
-- **Works with:** Sodium and Iris — Sodium held-item compatibility is built into the mod
-- **Both sides:** install on the client and the server
+- **Thorns now damages mobs wielding spears** — mob spear impacts now apply the
+  defender's defensive enchantments in 1.16.5, matching normal melee behavior.
+  This allows vanilla Thorns armor to return damage and damage durability for
+  spear-wielding Zombies, Husks, Piglins and Zombified Piglins.

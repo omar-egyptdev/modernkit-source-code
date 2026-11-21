@@ -121,6 +121,7 @@ Dark purple equipment and building blocks crafted from Obsidian.
 - **New in v1.5.97:** The Redstone Slab now supports redstone like a full block — dust placement, dust climbing onto it and power flow through it to pistons work on a single slab and when doubled.
 - **New in v1.5.97:** The Obsidian and Rainbow Doors now have proper vanilla-style door item icons in the hotbar and hand that match their placed textures (the Rainbow one animates like the rainbow gear), and the Spear, Mace and Wind Charge custom sounds now play correctly.
 - **New in v1.5.97:** Obsidian items are fireproof like the obsidian block, and the Rainbow Block now shows its name instead of a raw translation key.
+- **New in v1.5.973:** Mob spear attacks now trigger the target's defensive enchantments, including Thorns, so Zombies, Husks, Piglins and Zombified Piglins take Thorns damage normally.
 - **New in v1.5.9:** Fixed a bug where a placed Heavy Core dropped nothing when broken in survival.
 
 ---

@@ -404,6 +404,9 @@ public final class SpearMobCombat {
 
         if (damaged) {
 
+            // Apply the target's defensive enchantments, including Thorns.
+            EnchantmentHelper.onUserDamaged(target, mob);
+
             // Fire Aspect, Bane and other enchantment callbacks.
             EnchantmentHelper.onTargetDamaged(mob, target);
 
