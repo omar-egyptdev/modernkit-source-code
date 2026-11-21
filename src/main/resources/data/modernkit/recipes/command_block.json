@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ORO",
+    "RNR",
+    "ORO"
+  ],
+  "key": {
+    "O": { "item": "minecraft:obsidian" },
+    "R": { "item": "minecraft:redstone_block" },
+    "N": { "item": "minecraft:nether_star" }
+  },
+  "result": {
+    "item": "minecraft:command_block",
+    "count": 1
+  }
+}
