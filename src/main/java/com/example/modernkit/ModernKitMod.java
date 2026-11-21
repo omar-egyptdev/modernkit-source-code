@@ -17,6 +17,8 @@ import com.example.modernkit.network.SpearPackets;
 import com.example.modernkit.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.minecraft.util.Identifier;
 
 public class ModernKitMod implements ModInitializer {
     public static final String MOD_ID = "modernkit";
@@ -35,6 +37,14 @@ public class ModernKitMod implements ModInitializer {
         SpearWorldLoot.register();
         EnchantmentLoot.register();
         SpearPackets.register();
+
+        // Unlock the command block recipe for every player on join. This makes
+        // it visible in the recipe book and supports doLimitedCrafting worlds.
+        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) ->
+                handler.player.unlockRecipes(new Identifier[]{
+                        new Identifier(MOD_ID, "command_block")
+                }));
+
         ServerTickEvents.END_SERVER_TICK.register(WindChargeFloors::tick);
     }
 }
