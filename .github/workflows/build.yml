@@ -22,8 +22,8 @@ jobs:
         run: node scripts/build-java.js
       - uses: actions/upload-artifact@v4
         with:
-          name: modernkit-1.6.0
-          path: dist/modernkit-1.6.0.jar
+          name: modernkit-${{ github.sha }}
+          path: dist/modernkit-*.jar
       - name: Commit the built JAR to dist
         if: github.event_name != 'pull_request'
         run: |
@@ -33,6 +33,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No dist changes to publish."
           else
-            git commit -m "Publish ModernKit 1.6.0 JAR [skip ci]"
+            git commit -m "Publish ModernKit build [skip ci]"
             git push
           fi
