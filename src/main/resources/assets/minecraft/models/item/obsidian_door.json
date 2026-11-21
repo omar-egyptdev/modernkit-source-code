@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:block/obsidian_door_bottom"
+    "layer0": "modernkit:item/obsidian_door"
   }
 }

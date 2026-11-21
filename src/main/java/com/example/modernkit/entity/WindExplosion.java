@@ -27,7 +27,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraft.world.explosion.Explosion;
 
 import java.util.List;
 
@@ -37,6 +39,18 @@ import java.util.List;
  * knockback-only explosion that also presses buttons, flips levers, opens
  * wooden doors/trapdoors/fence gates, rings bells and breaks chorus flowers,
  * while respecting Blast Protection and knockback resistance.
+ *
+ * The burst also reproduces the vanilla fall rule: players knocked into the
+ * air only start accumulating fall damage once they fall below the Y level
+ * of the burst that hit them (tracked in {@link WindChargeFloors}), so wind
+ * charge jumps land safely. The visuals are the expanding gust rings rather
+ * than a plain smoke puff.
+ *
+ * The knockback itself follows the vanilla explosion model (decompiled from
+ * the 1.16.5 game jar): falloff from the entity's feet against the burst
+ * radius, push direction toward the entity's eyes, line-of-sight exposure
+ * from {@link Explosion#getExposure}, then Blast Protection and knockback
+ * resistance.
  */
 public final class WindExplosion {
 
@@ -78,31 +92,89 @@ public final class WindExplosion {
                 volume,
                 pitch
         );
-        serverWorld.spawnParticles(
-                ParticleTypes.CLOUD,
-                x,
-                y,
-                z,
-                24,
-                0.45D,
-                0.35D,
-                0.45D,
-                0.12D
-        );
-        serverWorld.spawnParticles(
-                ParticleTypes.POOF,
-                x,
-                y,
-                z,
-                8,
-                0.25D,
-                0.25D,
-                0.25D,
-                0.04D
-        );
+        spawnGust(serverWorld, x, y, z);
 
         interactWithBlocks(world, x, y, z, radius, owner);
         knockbackNearby(world, x, y, z, radius, knockbackBase, excluded);
+    }
+
+    /**
+     * Spawns the gust burst: two flat expanding cloud rings like the vanilla
+     * wind burst, a rising center column, end-rod sparks around the edge and
+     * a soft base puff.
+     */
+    private static void spawnGust(ServerWorld world, double x, double y, double z) {
+        spawnRing(world, x, y, z, 0.7D, 10);
+        spawnRing(world, x, y + 0.15D, z, 1.5D, 16);
+
+        // Rising center column.
+        for (int i = 0; i < 6; i++) {
+            world.spawnParticles(
+                    ParticleTypes.CLOUD,
+                    x,
+                    y + 0.1D + i * 0.35D,
+                    z,
+                    1,
+                    0.08D,
+                    0.02D,
+                    0.08D,
+                    0.02D
+            );
+        }
+
+        // End-rod sparks around the edge.
+        for (int i = 0; i < 12; i++) {
+            double angle = (Math.PI * 2.0D * i) / 12.0D;
+            world.spawnParticles(
+                    ParticleTypes.END_ROD,
+                    x + Math.cos(angle) * 0.9D,
+                    y + 0.3D,
+                    z + Math.sin(angle) * 0.9D,
+                    1,
+                    0.05D,
+                    0.05D,
+                    0.05D,
+                    0.04D
+            );
+        }
+
+        // Soft base puff.
+        world.spawnParticles(
+                ParticleTypes.CLOUD,
+                x,
+                y + 0.2D,
+                z,
+                6,
+                0.2D,
+                0.1D,
+                0.2D,
+                0.01D
+        );
+    }
+
+    /** Spawns one flat ring of cloud particles at explicit angular positions. */
+    private static void spawnRing(
+            ServerWorld world,
+            double x,
+            double y,
+            double z,
+            double radius,
+            int points
+    ) {
+        for (int i = 0; i < points; i++) {
+            double angle = (Math.PI * 2.0D * i) / points;
+            world.spawnParticles(
+                    ParticleTypes.CLOUD,
+                    x + Math.cos(angle) * radius,
+                    y,
+                    z + Math.sin(angle) * radius,
+                    1,
+                    0.02D,
+                    0.02D,
+                    0.02D,
+                    0.0D
+            );
+        }
     }
 
     private static void knockbackNearby(
@@ -114,6 +186,7 @@ public final class WindExplosion {
             double knockbackBase,
             Entity excluded
     ) {
+        Vec3d center = new Vec3d(x, y, z);
         Box area = new Box(
                 x - radius,
                 y - radius,
@@ -133,17 +206,36 @@ public final class WindExplosion {
                 continue;
             }
 
-            double dx = entity.getX() - x;
-            double dy = entity.getBodyY(0.5D) - y;
-            double dz = entity.getZ() - z;
-            double distanceSquared = dx * dx + dy * dy + dz * dz;
-
-            if (distanceSquared >= radius * radius) {
+            // Vanilla explosion rule: falloff is measured from the entity's
+            // FEET against the full burst radius, so a burst at your feet is
+            // a point-blank hit (old code measured from mid-body, which cut
+            // the launch of a ground burst in half).
+            double distance = Math.sqrt(entity.squaredDistanceTo(center));
+            if (distance >= radius) {
                 continue;
             }
 
-            double distance = Math.sqrt(distanceSquared);
+            // Push direction runs from the burst to the entity's eyes, so a
+            // ground burst under you throws you straight up instead of the
+            // old flat sideways shove with a fixed vertical pop.
+            double dx = entity.getX() - x;
+            double dy = entity.getEyeY() - y;
+            double dz = entity.getZ() - z;
+            double length = Math.sqrt(dx * dx + dy * dy + dz * dz);
+            if (length < 1.0E-4D) {
+                dx = 0.0D;
+                dy = 1.0D;
+                dz = 0.0D;
+            } else {
+                dx /= length;
+                dy /= length;
+                dz /= length;
+            }
+
             double strength = knockbackBase * (1.0D - distance / radius);
+            // Line of sight: a burst behind a wall barely pushes you.
+            strength *= Explosion.getExposure(center, entity);
+
             int blastProtection = EnchantmentHelper.getEquipmentLevel(
                     Enchantments.BLAST_PROTECTION,
                     entity
@@ -164,18 +256,11 @@ public final class WindExplosion {
                 continue;
             }
 
-            double horizontalLength = Math.sqrt(dx * dx + dz * dz);
-            double horizontalScale =
-                    horizontalLength < 1.0E-6D
-                            ? 0.0D
-                            : strength / horizontalLength;
-            double vertical = 0.45D + strength * 0.65D;
-
             entity.setVelocity(
                     entity.getVelocity().add(
-                            dx * horizontalScale,
-                            vertical,
-                            dz * horizontalScale
+                            dx * strength,
+                            dy * strength,
+                            dz * strength
                     )
             );
             entity.velocityModified = true;
@@ -185,6 +270,9 @@ public final class WindExplosion {
                 player.networkHandler.sendPacket(
                         new EntityVelocityUpdateS2CPacket(player)
                 );
+                // Vanilla wind burst rule: fall damage accumulates only once
+                // the player falls below the Y level of this burst.
+                WindChargeFloors.setFloor(player, y);
             }
         }
     }

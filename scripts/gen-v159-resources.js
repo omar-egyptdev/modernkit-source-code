@@ -103,7 +103,7 @@ write(path.join(A_MC, 'models/item/obsidian_stairs.json'), { parent: 'minecraft:
 write(path.join(A_MC, 'models/item/rainbow_block.json'), { parent: 'minecraft:block/rainbow_block' });
 for (const d of DOORS) write(path.join(A_MC, `models/item/${d.name}_door.json`), {
   parent: 'item/generated',
-  textures: { layer0: d.bottom },
+  textures: { layer0: `modernkit:item/${d.name}_door` },
 });
 
 // --------------------------------------------------------------------- recipes
@@ -167,6 +167,7 @@ const title = (w) => w[0].toUpperCase() + w.slice(1);
 for (const g of GEAR) lang[`item.minecraft.obsidian_${g}`] = `Obsidian ${title(g)}`;
 for (const s of SLABS) lang[`block.minecraft.${s.name}_slab`] = `${title(s.name)} Slab`;
 lang['block.minecraft.obsidian_stairs'] = 'Obsidian Stairs';
+lang['block.minecraft.rainbow_block'] = 'Rainbow Block';
 for (const d of DOORS) lang[`block.minecraft.${d.name}_door`] = `${title(d.name)} Door`;
 fs.writeFileSync(langPath, JSON.stringify(lang, null, 2) + '\n');
 

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:block/rainbow_door_bottom"
+    "layer0": "modernkit:item/rainbow_door"
   }
 }

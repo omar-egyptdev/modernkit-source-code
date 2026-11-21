@@ -18,25 +18,25 @@ public final class ObsidianItems {
             ObsidianToolMaterial.SWORD,
             ObsidianToolMaterial.SWORD_ATTACK_BONUS,
             ObsidianToolMaterial.SWORD_ATTACK_SPEED,
-            new Item.Settings().group(ItemGroup.COMBAT));
+            new Item.Settings().group(ItemGroup.COMBAT).fireproof());
 
     public static final Item OBSIDIAN_PICKAXE = new PickaxeItem(
             ObsidianToolMaterial.PICKAXE,
             ObsidianToolMaterial.PICKAXE_ATTACK_BONUS,
             ObsidianToolMaterial.PICKAXE_ATTACK_SPEED,
-            new Item.Settings().group(ItemGroup.TOOLS)) {};
+            new Item.Settings().group(ItemGroup.TOOLS).fireproof()) {};
 
     public static final Item OBSIDIAN_AXE = new AxeItem(
             ObsidianToolMaterial.AXE,
             ObsidianToolMaterial.AXE_ATTACK_BONUS,
             ObsidianToolMaterial.AXE_ATTACK_SPEED,
-            new Item.Settings().group(ItemGroup.TOOLS)) {};
+            new Item.Settings().group(ItemGroup.TOOLS).fireproof()) {};
 
     public static final Item OBSIDIAN_SHOVEL = new ShovelItem(
             ObsidianToolMaterial.SHOVEL,
             ObsidianToolMaterial.SHOVEL_ATTACK_BONUS,
             ObsidianToolMaterial.SHOVEL_ATTACK_SPEED,
-            new Item.Settings().group(ItemGroup.TOOLS));
+            new Item.Settings().group(ItemGroup.TOOLS).fireproof());
 
     public static final Item OBSIDIAN_HELMET = armor(EquipmentSlot.HEAD);
     public static final Item OBSIDIAN_CHESTPLATE = armor(EquipmentSlot.CHEST);
@@ -45,7 +45,7 @@ public final class ObsidianItems {
 
     private static Item armor(EquipmentSlot slot) {
         return new ArmorItem(ObsidianArmorMaterial.INSTANCE, slot,
-                new Item.Settings().group(ItemGroup.COMBAT));
+                new Item.Settings().group(ItemGroup.COMBAT).fireproof());
     }
 
     public static void register() {

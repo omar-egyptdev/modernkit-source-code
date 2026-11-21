@@ -1,37 +1,71 @@
-# ModernKit v1.5.9 — Obsidian Gear, Rainbow Blocks & Material Slabs
+# ModernKit v1.5.97 — Wind Charge Rework, All Custom Sounds & Redstone Slab
 
-A big content update: a full Obsidian equipment set with its own custom 3D armor model, Obsidian and Rainbow building blocks, slabs for five vanilla materials, and a survival bug fix.
+A sounds-and-fixes update for the v1.5.9 content: the Wind Charge now works like the
+real one from newer versions, every sound is custom (Spear, Mace, Wind Charge, Obsidian
+Door), plus proper door item icons and gameplay fixes.
 
-## 🪨 Obsidian Equipment
+## 🔊 New Sounds
 
-- **Obsidian Sword, Pickaxe, Axe and Shovel** — dark purple obsidian tools, one step above Diamond: 2048 durability, faster mining, and the Sword hits for 13 damage. Crafted from Obsidian in the standard tool shapes.
-- **Obsidian Armor (Helmet, Chestplate, Leggings, Boots)** — Diamond-level protection with Netherite-level toughness, 40 uses per armor point, and repairable with Obsidian. Crafted from Obsidian in the standard armor shapes.
+- **The Spear now has its own sounds** — three attack whooshes, three hit impacts, and
+  three lunge sounds for charging: engaged, tired (low charge) and disengaged. Mobs
+  wielding spears use the same hit sound instead of the old trident sound.
+- **The Mace now has its own sounds** — four ground smash sounds (a heavy variant
+  kicks in on big falls) and three air sounds for the Wind Burst launch shockwave.
+- **The Wind Charge now has its own sounds** — three burst sounds for the explosion
+  and a custom airy throw whoosh (no more vanilla trident sounds).
 
-## 🛡️ Custom 3D Obsidian Armor Model
+## 🌪️ Wind Charge Mechanics Rework
 
-Obsidian Armor does not use the standard vanilla armor shape — it has its own 3D model in the same style as the Emerald and Rainbow armor sets:
+The Wind Charge now behaves like the real one from newer versions:
 
-- **Helmet** — jagged crest fin down the center, two swept-back horn spikes, and side cheek guards.
-- **Chestplate** — layered chest plate with a protruding gem shard, an abdomen plate, and a full back plate.
-- **Pauldrons** — heavy shoulder caps with side plates and top spikes.
-- **Leggings** — belt buckle, hip side plates, and thigh and knee plates.
-- **Boots** — cuff rings and protruding toe caps.
+- **Free wind charge jumps** — the vanilla fall rule: when a burst launches you, fall
+  damage only starts building up once you fall back below the height where the burst
+  hit you. Throw one at your feet, ride the gust, land safe. This protection is now
+  reliable: it used to be dropped on the very tick of the burst, because the player
+  was still standing on the ground at that moment.
+- **Proper launch** — the burst now uses the real explosion knockback model taken
+  from the game code: falloff measured from your feet, push direction aimed at your
+  eyes, and line-of-sight exposure. A charge bursting at your feet throws you about
+  7 blocks straight up, and a jump on top of it clears the 8-block "Who Needs
+  Rockets?" height.
+- **Directional push** — a burst shoves entities away from the blast toward their
+  eyes instead of a flat sideways pop with a fixed vertical hop: point-blank bursts
+  launch straight up, off-center bursts throw up and away, and walls in between
+  block the push. Blast Protection and knockback resistance still reduce it.
+- **Gust visuals** — bursts spawn expanding white gust rings with a rising center
+  column and end-rod sparks, instead of a flat smoke puff.
+- **Flight trail** — every thrown wind charge now leaves a swirling cloud wake with
+  occasional end-rod sparks, visible to every player.
+- **Louder burst** — the burst sound now plays at full volume.
+- Already matching vanilla and kept: 2.4-block burst radius, direct hit deals 1
+  damage, straight no-gravity flight, deflectable by melee, presses buttons/levers/
+  doors/trapdoors/fence gates, rings bells, breaks chorus flowers, Blast Protection
+  reduces the knockback, mobs keep normal fall damage.
 
-All pieces use the obsidian purple-black palette to match the gear icons.
+## 🔴 Redstone Slab
 
-## 🧱 Obsidian & Rainbow Blocks
+- **The Redstone Slab now works like a full block.** Redstone dust can be placed on it, dust climbs onto it like on a solid block, and power flows through it — so a piston or other component on top of the slab receives power from below.
+- Works in both forms: on a single slab and when two slabs are doubled into a full block.
 
-- **Obsidian Stairs, Slab and Door** — build with obsidian at last. The door has window panes, opens by hand, and zombies can't break it down.
-- **Rainbow Block, Slab and Door** — the rainbow gear's animated shimmer, now as placeable blocks. The rainbow layers animate in your hand, in your inventory and when placed.
-- Craft the Rainbow Block from 9 Rainbow Ingots; slabs give 6, doors give 3.
+## 🚪 Door Item Icons
 
-## 🟨 Material Slabs
+- **Obsidian Door** now has its own door icon drawn in the vanilla door style — the hotbar and held item show the same door shape as the vanilla oak door icon (window panes, hinges, handle and recessed panels), and it takes its colors and obsidian swirls straight from the actual obsidian door texture, so the held icon matches the door you place.
+- **Rainbow Door** got the same door icon treatment, with the animated rainbow shimmer like the rainbow gear.
 
-- **Gold, Diamond, Emerald, Coal and Redstone Slabs** — half-size versions of the vanilla blocks, crafted from 3 of each block (makes 6).
+## 🪨 Obsidian Improvements
+
+- **Fireproof:** every Obsidian item (tools, armor, stairs, slab and door) no longer burns in fire or lava when dropped, like the obsidian block itself.
+- **Durability confirmed:** the tools keep their 2048 durability and the armor keeps 40 uses per armor point (Netherite-level).
 
 ## 🐛 Fixes
 
-- **Heavy Core now drops itself in survival** — placing it worked since v1.5.82, but breaking a placed Heavy Core gave nothing back. Fixed.
+- **Custom sounds fixed** — the Spear, Mace and Wind Charge sounds were silent because
+  their sound files were registered without the modernkit namespace prefix in the sound
+  definitions; they now play correctly everywhere (attacks, hits, lunges, smashes,
+  bursts, throws — by players and by mobs).
+- **Obsidian Door sound** — the door now opens and closes with the normal vanilla door
+  sound, by hand and by redstone.
+- **Rainbow Block now shows its name** ("Rainbow Block") instead of the raw translation key.
 
 ## 📦 Compatibility
 

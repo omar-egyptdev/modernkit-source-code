@@ -16,8 +16,8 @@ Whether you're smashing enemies with a Mace, launching Wind Charges, charging in
 
 ### ⚔️ Weapons & Combat
 
-- **Mace** — Fall from a height and land a powerful smash attack. The longer the fall, the more damage you deal. A successful smash cancels your fall damage, knocks back nearby mobs, and plays impact effects.
-- **Spears** — Six variants: wooden, stone, golden, iron, diamond, and netherite. Jab with a quick attack, or hold to charge into enemies. Includes first- and third-person animations.
+- **Mace** — Fall from a height and land a powerful smash attack. The longer the fall, the more damage you deal. A successful smash cancels your fall damage, knocks back nearby mobs, and plays impact effects — with its own custom sounds since v1.5.97: ground smashes (a heavier one on big falls) and air sounds for the Wind Burst launch.
+- **Spears** — Six variants: wooden, stone, golden, iron, diamond, and netherite. Jab with a quick attack, or hold to charge into enemies. Includes first- and third-person animations — and its own sounds since v1.5.97: attack whooshes, hit impacts and the three lunge charge states (engaged, tired, disengaged).
 - **Lunge Enchantment** — A spear-exclusive enchantment (levels I to III).
 - **Mob Kabob Advancement** — Hit five mobs with a single charge attack.
 - **Mace Enchantments** (new in v1.5.6) — The four modern mace enchantments, backported:
@@ -28,7 +28,7 @@ Whether you're smashing enemies with a Mace, launching Wind Charges, charging in
 
 ### 🌪️ Wind & Breeze Items
 
-- **Wind Charge** — A throwable projectile with its own sounds.
+- **Wind Charge** — A throwable projectile that works like the real one from newer versions: free wind charge jumps (fall damage only builds up below the burst height), a ~7-block straight-up launch when it bursts at your feet, a swirling cloud flight trail, expanding gust-ring visuals, and its own custom sounds (custom bursts and a throw whoosh).
 - **Breeze Rod** — Used to craft Wind Charges and the Mace, and to repair the Mace.
 - **Heavy Core** — The crafting component at the heart of the Mace. A real placeable block, with the Heavy Core texture on all six faces (new in v1.5.82).
 
@@ -69,11 +69,12 @@ Dark purple equipment and building blocks crafted from Obsidian.
 - **Obsidian Pickaxe / Axe / Shovel** — 2048-durability tools, one step above Diamond.
 - **Obsidian Armor** (Helmet, Chestplate, Leggings, Boots) — Diamond-level protection with Netherite-level toughness, repairable with Obsidian. Has its own custom 3D model: a jagged helmet crest, swept-back horn spikes, cheek guards, layered chest plating with a chest gem shard, heavy pauldrons, a plated belt, and boot cuffs.
 - **Obsidian Stairs / Slab / Door** — Obsidian building blocks. The door has window panes, opens by hand, and zombies can't break it down.
+- Every Obsidian item is fireproof like the obsidian block — dropped items don't burn in fire or lava (new in v1.5.97).
 
 ### 🧱 Building Blocks (new in v1.5.9)
 
 - **Rainbow Block / Slab / Door** — the rainbow gear's animated shimmer as placeable blocks; the rainbow layers animate in your hand, in your inventory and when placed.
-- **Gold / Diamond / Emerald / Coal / Redstone Slab** — half-size versions of the vanilla blocks.
+- **Gold / Diamond / Emerald / Coal / Redstone Slab** — half-size versions of the vanilla blocks. The Redstone Slab works like a full block for redstone: dust can be placed on it, dust climbs onto it, and power flows through it to pistons and other components — on a single slab and when doubled into a full block (new in v1.5.97).
 
 ---
 
@@ -117,6 +118,9 @@ Dark purple equipment and building blocks crafted from Obsidian.
 - **New in v1.5.82:** Heavy Core is now a placeable block with the Heavy Core texture on all six faces, renders as a real 3D block in hand and inventory like vanilla blocks, and still works in crafting exactly as before.
 - **New in v1.5.9:** The Obsidian Set (tools, armor, stairs, slab and door), animated Rainbow Block / Slab / Door, and Gold, Diamond, Emerald, Coal and Redstone Slabs.
 - **New in v1.5.9:** Obsidian Armor has its own custom 3D model — jagged helmet crest, swept-back horn spikes, cheek guards, layered chest plating with a gem shard, heavy pauldrons, plated belt and boot cuffs — instead of the standard vanilla armor shape.
+- **New in v1.5.97:** The Redstone Slab now supports redstone like a full block — dust placement, dust climbing onto it and power flow through it to pistons work on a single slab and when doubled.
+- **New in v1.5.97:** The Obsidian and Rainbow Doors now have proper vanilla-style door item icons in the hotbar and hand that match their placed textures (the Rainbow one animates like the rainbow gear), and the Spear, Mace and Wind Charge custom sounds now play correctly.
+- **New in v1.5.97:** Obsidian items are fireproof like the obsidian block, and the Rainbow Block now shows its name instead of a raw translation key.
 - **New in v1.5.9:** Fixed a bug where a placed Heavy Core dropped nothing when broken in survival.
 
 ---

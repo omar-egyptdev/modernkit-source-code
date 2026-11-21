@@ -3,6 +3,7 @@ package com.example.modernkit.combat;
 import com.example.modernkit.item.ModItems;
 import com.example.modernkit.item.SpearItem;
 import com.example.modernkit.item.SpearMaterial;
+import com.example.modernkit.sound.ModSounds;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
@@ -21,7 +22,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 
@@ -447,7 +447,7 @@ public final class SpearMobCombat {
                         target.getX(),
                         target.getY(),
                         target.getZ(),
-                        SoundEvents.ITEM_TRIDENT_HIT,
+                        ModSounds.SPEAR_JAB_IMPACT,
                         SoundCategory.HOSTILE,
                         0.8F,
                         0.9F

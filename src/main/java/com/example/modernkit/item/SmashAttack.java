@@ -16,7 +16,6 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Box;
 
 import java.util.List;
@@ -128,9 +127,9 @@ public final class SmashAttack {
                 WIND_BURST_KNOCKBACK_BASE * multiplier,
                 attacker,
                 attacker,
-                ModSounds.WIND_CHARGE_BURST,
+                ModSounds.MACE_SMASH_AIR,
                 1.0F,
-                1.0F
+                0.9F + attacker.world.random.nextFloat() * 0.2F
         );
 
         // Controlled vertical launch for the attacker, reduced by Blast Protection.
@@ -156,11 +155,11 @@ public final class SmashAttack {
             sw.spawnParticles(ParticleTypes.SWEEP_ATTACK, target.getX(), y, target.getZ(), 2, 0.6D, 0.2D, 0.6D, 0.0D);
         }
 
-        // Sounds - closest vanilla equivalents to the real mace sounds
-        sw.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.PLAYERS, 1.0F, 0.6F);
-        sw.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.PLAYERS, 0.7F, 1.2F);
+        // Sounds - the custom mace smash sounds. Ground variants always play;
+        // heavy falls add the dedicated heavy smash on top.
+        sw.playSound(null, target.getX(), target.getY(), target.getZ(), ModSounds.MACE_SMASH_GROUND, SoundCategory.PLAYERS, 1.0F, 0.9F + sw.random.nextFloat() * 0.2F);
         if (fall > 5.0F) {
-            sw.playSound(null, target.getX(), target.getY(), target.getZ(), SoundEvents.ENTITY_IRON_GOLEM_HURT, SoundCategory.PLAYERS, 0.8F, 0.7F);
+            sw.playSound(null, target.getX(), target.getY(), target.getZ(), ModSounds.MACE_SMASH_GROUND_HEAVY, SoundCategory.PLAYERS, 1.0F, 1.0F);
         }
     }
 

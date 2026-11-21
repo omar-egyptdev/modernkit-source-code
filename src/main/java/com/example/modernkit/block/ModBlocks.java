@@ -72,16 +72,17 @@ public final class ModBlocks {
             .strength(5.0F, 6.0F)
             .sounds(BlockSoundGroup.STONE));
 
-    public static final Block REDSTONE_SLAB = new SlabBlock(AbstractBlock.Settings.of(Material.STONE)
+    public static final Block REDSTONE_SLAB = new RedstoneSlabBlock(AbstractBlock.Settings.of(Material.STONE)
             .strength(5.0F, 6.0F)
-            .sounds(BlockSoundGroup.STONE));
+            .sounds(BlockSoundGroup.STONE)
+            .solidBlock((state, world, pos) -> true));
 
     public static void register() {
         block("heavy_core", HEAVY_CORE);
 
-        block("obsidian_slab", OBSIDIAN_SLAB);
-        block("obsidian_stairs", OBSIDIAN_STAIRS);
-        block("obsidian_door", OBSIDIAN_DOOR);
+        block("obsidian_slab", OBSIDIAN_SLAB, fireproofItem());
+        block("obsidian_stairs", OBSIDIAN_STAIRS, fireproofItem());
+        block("obsidian_door", OBSIDIAN_DOOR, fireproofItem());
 
         block("rainbow_block", RAINBOW_BLOCK);
         block("rainbow_slab", RAINBOW_SLAB);
@@ -95,9 +96,17 @@ public final class ModBlocks {
     }
 
     private static void block(String name, Block block) {
+        block(name, block, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    }
+
+    private static void block(String name, Block block, Item.Settings settings) {
         Identifier id = new Identifier("minecraft", name);
         Registry.register(Registry.BLOCK, id, block);
-        Registry.register(Registry.ITEM, id, new BlockItem(block,
-                new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+        Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
+    }
+
+    /** Obsidian items don't burn in fire or lava, like the obsidian block itself. */
+    private static Item.Settings fireproofItem() {
+        return new Item.Settings().group(ItemGroup.BUILDING_BLOCKS).fireproof();
     }
 }

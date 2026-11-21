@@ -9,12 +9,14 @@ import com.example.modernkit.item.RainbowItems;
 import com.example.modernkit.item.EmeraldItems;
 import com.example.modernkit.item.ObsidianItems;
 import com.example.modernkit.entity.ModEntities;
+import com.example.modernkit.entity.WindChargeFloors;
 import com.example.modernkit.loot.EnchantmentLoot;
 import com.example.modernkit.loot.SpearWorldLoot;
 import com.example.modernkit.enchantment.ModEnchantments;
 import com.example.modernkit.network.SpearPackets;
 import com.example.modernkit.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 
 public class ModernKitMod implements ModInitializer {
     public static final String MOD_ID = "modernkit";
@@ -33,5 +35,6 @@ public class ModernKitMod implements ModInitializer {
         SpearWorldLoot.register();
         EnchantmentLoot.register();
         SpearPackets.register();
+        ServerTickEvents.END_SERVER_TICK.register(WindChargeFloors::tick);
     }
 }

@@ -1,66 +1,63 @@
 {
   "entity.modernkit.spear.jab_start": {
     "sounds": [
-      {
-        "name": "minecraft:entity.player.attack.sweep",
-        "type": "event"
-      }
+      "modernkit:entity/spear/spear_attack1",
+      "modernkit:entity/spear/spear_attack2",
+      "modernkit:entity/spear/spear_attack3"
     ]
   },
   "entity.modernkit.spear.jab_impact": {
     "sounds": [
-      {
-        "name": "minecraft:item.trident.hit",
-        "type": "event"
-      }
+      "modernkit:entity/spear/spear_hit1",
+      "modernkit:entity/spear/spear_hit2",
+      "modernkit:entity/spear/spear_hit3"
     ]
   },
   "entity.modernkit.spear.charge_engaged": {
     "sounds": [
-      {
-        "name": "minecraft:item.trident.throw",
-        "type": "event"
-      }
+      "modernkit:entity/spear/spear_lunge1"
     ]
   },
   "entity.modernkit.spear.charge_tired": {
     "sounds": [
-      {
-        "name": "minecraft:entity.player.attack.weak",
-        "type": "event"
-      }
+      "modernkit:entity/spear/spear_lunge2"
     ]
   },
   "entity.modernkit.spear.charge_disengaged": {
     "sounds": [
-      {
-        "name": "minecraft:entity.player.attack.nodamage",
-        "type": "event"
-      }
+      "modernkit:entity/spear/spear_lunge3"
     ]
   },
   "item.modernkit.wind_charge.throw": {
     "sounds": [
-      {
-        "name": "minecraft:item.trident.throw",
-        "type": "event"
-      }
+      "modernkit:entity/wind_charge/wind_throw"
     ]
   },
   "entity.modernkit.wind_charge.burst": {
     "sounds": [
-      {
-        "name": "entity/wind_charge/wind_burst1",
-        "type": "file"
-      },
-      {
-        "name": "entity/wind_charge/wind_burst2",
-        "type": "file"
-      },
-      {
-        "name": "entity/wind_charge/wind_burst3",
-        "type": "file"
-      }
+      "modernkit:entity/wind_charge/wind_burst1",
+      "modernkit:entity/wind_charge/wind_burst2",
+      "modernkit:entity/wind_charge/wind_burst3"
+    ]
+  },
+  "entity.modernkit.mace.smash_ground": {
+    "sounds": [
+      "modernkit:entity/mace/smash_ground1",
+      "modernkit:entity/mace/smash_ground2",
+      "modernkit:entity/mace/smash_ground3",
+      "modernkit:entity/mace/smash_ground4"
+    ]
+  },
+  "entity.modernkit.mace.smash_ground_heavy": {
+    "sounds": [
+      "modernkit:entity/mace/smash_ground_heavy"
+    ]
+  },
+  "entity.modernkit.mace.smash_air": {
+    "sounds": [
+      "modernkit:entity/mace/smash_air1",
+      "modernkit:entity/mace/smash_air2",
+      "modernkit:entity/mace/smash_air3"
     ]
   }
 }

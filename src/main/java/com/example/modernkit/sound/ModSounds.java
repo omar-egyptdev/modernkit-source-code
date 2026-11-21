@@ -15,6 +15,9 @@ public final class ModSounds {
     public static SoundEvent SPEAR_CHARGE_DISENGAGED;
     public static SoundEvent WIND_CHARGE_THROW;
     public static SoundEvent WIND_CHARGE_BURST;
+    public static SoundEvent MACE_SMASH_GROUND;
+    public static SoundEvent MACE_SMASH_GROUND_HEAVY;
+    public static SoundEvent MACE_SMASH_AIR;
 
     private ModSounds() {
     }
@@ -35,6 +38,10 @@ public final class ModSounds {
         WIND_CHARGE_THROW = registerSound("item.modernkit.wind_charge.throw");
         WIND_CHARGE_BURST =
                 registerSound("entity.modernkit.wind_charge.burst");
+        MACE_SMASH_GROUND = registerSound("entity.modernkit.mace.smash_ground");
+        MACE_SMASH_GROUND_HEAVY =
+                registerSound("entity.modernkit.mace.smash_ground_heavy");
+        MACE_SMASH_AIR = registerSound("entity.modernkit.mace.smash_air");
     }
 
     private static SoundEvent registerSound(String path) {
