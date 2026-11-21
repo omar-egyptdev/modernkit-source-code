@@ -1,3 +1,11 @@
+# ModernKit v1.6.0 — Craftable Command Block
+
+## ✨ Additions
+
+- **Craftable Command Block** — Added a shaped 3×3 crafting recipe using 4 Obsidian, 4 Redstone Blocks, and 1 Nether Star. The recipe produces one vanilla Command Block.
+
+---
+
 # ModernKit v1.5.973 — Mob Spear Thorns Fix
 
 ## 🐛 Fixes
