@@ -1,3 +1,14 @@
+# ModernKit v1.8.0 — Command Block Recipe for Every Player
+
+## ✨ Additions
+
+- **Automatic Command Block Recipe Unlock** — Every player now unlocks the
+  command block crafting recipe when joining a world or server. The recipe is
+  available in the recipe book without cheats and also works when
+  `doLimitedCrafting` is enabled.
+
+---
+
 # ModernKit v1.6.0 — Craftable Command Block
 
 ## ✨ Additions
