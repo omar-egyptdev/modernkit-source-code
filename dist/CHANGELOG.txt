@@ -1,4 +1,4 @@
-# ModernKit v1.8.0 — Command Block Recipe for Every Player
+# ModernKit v1.8.0 — Command Block Recipe and Advancement
 
 ## ✨ Additions
 
@@ -6,6 +6,9 @@
   command block crafting recipe when joining a world or server. The recipe is
   available in the recipe book without cheats and also works when
   `doLimitedCrafting` is enabled.
+- **The Limit Is Your Imagination** — Added an advancement with a Command Block
+  icon. It unlocks when a player obtains a vanilla Command Block in their
+  inventory, including by crafting it.
 
 ---
 
