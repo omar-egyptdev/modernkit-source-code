@@ -10,6 +10,8 @@ Ever wanted to experience some of Minecraft's newer items without leaving your f
 
 Whether you're smashing enemies with a Mace, launching Wind Charges, charging into battle with a Spear, mining bedrock in survival, or equipping yourself with Emerald, Rainbow and Obsidian gear, ModernKit brings more tools and equipment to your Minecraft world.
 
+You can also craft the vanilla **Command Block** in Survival mode without cheats.
+
 ---
 
 ## ✨ What's Included?
@@ -32,9 +34,10 @@ Whether you're smashing enemies with a Mace, launching Wind Charges, charging in
 - **Breeze Rod** — Used to craft Wind Charges and the Mace, and to repair the Mace.
 - **Heavy Core** — The crafting component at the heart of the Mace. A real placeable block, with the Heavy Core texture on all six faces (new in v1.5.82).
 
-### ⛏️ Tools
+### ⛏️ Tools & Special Blocks
 
 - **Bedrock Pickaxe** — Mine bedrock in survival mode! Bedrock drops itself when mined.
+- **Command Block** (added in v1.6.0) — Craft the vanilla `minecraft:command_block` in Survival mode using Obsidian, Redstone Blocks and a Nether Star. The recipe is automatically unlocked for every player when they join a world or server, so no cheats or manual recipe unlock are required. Obtaining the Command Block also grants **The Limit Is Your Imagination** advancement.
 
 ### 💚 Emerald Equipment
 
@@ -82,6 +85,7 @@ Dark purple equipment and building blocks crafted from Obsidian.
 
 | Item | Recipe |
 |---|---|
+| **Command Block** (vanilla) | 4 Obsidian + 4 Redstone Blocks + 1 Nether Star (see exact layout below) |
 | Bedrock Pickaxe | 3 Bedrock on top, 2 Sticks below |
 | Breeze Rod | Blaze Rod + Phantom Membrane |
 | Heavy Core | Netherite Ingot surrounded by 4 Obsidian |
@@ -99,10 +103,36 @@ Dark purple equipment and building blocks crafted from Obsidian.
 | Rainbow Slab / Door | Crafted from Rainbow Blocks (slabs 6, doors 3) |
 | Gold / Diamond / Emerald / Coal / Redstone Slab | 3 of each block (makes 6) |
 
+### Command Block — exact 3×3 recipe
+
+Place the ingredients in a crafting table in this exact arrangement:
+
+```text
+Obsidian       Redstone Block       Obsidian
+Redstone Block Nether Star          Redstone Block
+Obsidian       Redstone Block       Obsidian
+```
+
+Or, using the recipe symbols:
+
+```text
+O R O
+R N R
+O R O
+
+O = Obsidian
+R = Redstone Block
+N = Nether Star
+```
+
+This crafts **1 vanilla Command Block** (`minecraft:command_block`). The recipe is provided by ModernKit and is unlocked automatically when each player joins the world or server.
+
 ---
 
 ## 🔧 Fixes & Improvements
 
+- **New in v1.6.0:** Added a Survival-mode crafting recipe for the vanilla Command Block, using 4 Obsidian, 4 Redstone Blocks and 1 Nether Star.
+- **New in v1.8.0:** The Command Block recipe unlocks automatically for every joining player, and obtaining a Command Block grants **The Limit Is Your Imagination** advancement.
 - Bedrock now properly drops itself when mined with the Bedrock Pickaxe.
 - The Mace no longer performs sword-style sweep attacks.
 - Optimized the Wind Charge texture for better loading.
