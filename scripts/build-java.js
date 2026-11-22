@@ -42,16 +42,16 @@ function main() {
   const output = (res.stdout || '') + (res.stderr || '');
   if (res.error || res.status !== 0) {
     const header =
-      'ModernKit build failed\\n' +
-      'Time: ' + new Date().toISOString() + '\\n' +
-      'Target version: ' + version + '\\n' +
-      '==============================\\n\\n';
+      'ModernKit build failed\n' +
+      'Time: ' + new Date().toISOString() + '\n' +
+      'Target version: ' + version + '\n' +
+      '==============================\n\n';
     fs.writeFileSync(LOG, header + output);
-    const lines = output.split('\\n');
+    const lines = output.split('\n');
     const errors = lines.filter((line) => /error|FAILED|What went wrong/i.test(line));
-    console.error('\\nBUILD FAILED');
-    console.error((errors.length ? errors : lines).slice(-30).join('\\n'));
-    console.error('\\nFull output saved to gradle-failed-build.log');
+    console.error('\nBUILD FAILED');
+    console.error((errors.length ? errors : lines).slice(-30).join('\n'));
+    console.error('\nFull output saved to gradle-failed-build.log');
     process.exit(1);
   }
 
@@ -65,7 +65,7 @@ function main() {
   fs.copyFileSync(builtJar, path.join(DIST, jarName));
   if (fs.existsSync(LOG)) fs.unlinkSync(LOG);
 
-  console.log('\\nBUILD SUCCESSFUL');
+  console.log('\nBUILD SUCCESSFUL');
   console.log('Created dist/' + jarName);
   console.log('Existing JARs in dist/ were preserved.');
 }
