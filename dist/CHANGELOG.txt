@@ -1,4 +1,4 @@
-# ModernKit v1.8.0 — Command Block Recipe and Advancement
+# ModernKit v1.6.1 — Command Block Recipe and Advancement
 
 ## ✨ Additions
 
