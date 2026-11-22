@@ -18,13 +18,4 @@
 
 - **Craftable Command Block** — Added a shaped 3×3 crafting recipe using 4 Obsidian, 4 Redstone Blocks, and 1 Nether Star. The recipe produces one vanilla Command Block.
 
----
-
-# ModernKit v1.5.973 — Mob Spear Thorns Fix
-
-## 🐛 Fixes
-
-- **Thorns now damages mobs wielding spears** — mob spear impacts now apply the
-  defender's defensive enchantments in 1.16.5, matching normal melee behavior.
-  This allows vanilla Thorns armor to return damage and damage durability for
-  spear-wielding Zombies, Husks, Piglins and Zombified Piglins.
+Now. "The Only Limit Is Your Imagination".
